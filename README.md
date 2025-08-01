@@ -1,12 +1,9 @@
 # BRATS_2020
 
 ## **How to run this tutorial (with/without TLS with Federated Runtime as a simulation):**
-<br/>
 
 ### 1. If you haven't done so already, create a virtual environment, install OpenFL, and upgrade pip:
   - For help with this step, visit the "Install the Package" section of the [OpenFL installation instructions](https://openfl.readthedocs.io/en/latest/installation.html).
-
-<br/>
 
 # Generate Certificates:
 These commands are not supported with fx experimental. 
@@ -65,15 +62,12 @@ Note: There is minor issue with the dataset for the entry
 
 ### 1. Split terminal into 4 (1 terminal for the director, 2 for the envoys, and 1 for the experiment)
 
-<br/> 
-
 ### 2. Do the following in each terminal:
    - Activate the virtual environment from step 1:
    
 ```sh
 source venv/bin/activate
 ```
-<br/>
 
 ### 3. In the first terminal, activate experimental features and run the director:
 
@@ -107,7 +101,6 @@ cd Apollo
 cd Sparsh
 ./start_envoy.sh
 ```
-<br/>
 
 ### 5. Now that your director and envoy terminals are set up, run the Jupyter Notebook in your experiment terminal:
 
