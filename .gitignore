@@ -1,0 +1,9 @@
+**/dataset
+**/*.log
+**/__pycache__
+**/*.pyc
+venv/
+**/.ipynb_checkpoints
+**/*.keras
+**/*.h5
+**/generated_workspace
