@@ -1,5 +1,5 @@
 settings:
-    director_host: localhost
+    director_host: <host_name>
     director_port: 50050
 
 Sparsh:

@@ -35,6 +35,7 @@ sys.brk.max_size = "1M"
 sys.enable_sigterm_injection = true
 sys.enable_extra_runtime_domain_names_conf = true
 sys.experimental__enable_flock = true
+sgx.remote_attestation="dcap"
 
 # SGX configuration
 sgx.debug = false

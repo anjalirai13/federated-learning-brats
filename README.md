@@ -14,9 +14,9 @@ These commands are not supported with fx experimental.
 ```sh
 fx pki install -p certs --ca-url localhost:50050
 fx pki run -p certs
-fx pki get-token -n localhost --ca-path certs --ca-url localhost:50050
+fx pki get-token -n <host_name> --ca-path certs --ca-url localhost:50050
 cd director
-fx pki certify -n localhost -t `director_token`
+fx pki certify -n <host_name> -t `director_token`
 ```
 
 ## Envoy-1
@@ -85,7 +85,7 @@ To run ``fx`` within a TEE, mount the SGX device and AESMD volumes. In addition,
 
 ### Aggregator
 ```sh
-docker run -u 1000:1000 -e GRAMINE=1 -v $HOME/.metaflow:/intel/.metaflow  -it --net=host --device=/dev/sgx_enclave --device /dev/sgx_provision --security-opt no-new-privileges brats_test director start -c director/director_config.yaml -rc director/cert/root_ca.crt -pk director/cert/localhost.key -oc director/cert/localhost.crt
+docker run -u 1000:1000 -e GRAMINE=1 -v $HOME/.metaflow:/intel/.metaflow -v /var/run/aesmd/aesm.socket:/var/run/aesmd/aesm.socket -it --net=host --device=/dev/sgx_enclave --device /dev/sgx_provision --security-opt no-new-privileges brats_test director start -c director/director_config.yaml -rc director/cert/root_ca.crt -pk director/cert/<host_name>.key -oc director/cert/<host_name>.crt
 ```
 
 ### 4. In the second, and third terminals, run the envoys:
